@@ -16,7 +16,7 @@ class Solution {
     }
 }
 
-//Second Solution
+//Second Solution(Best Solution)
 
 class Solution {
 
