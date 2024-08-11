@@ -37,3 +37,19 @@ class Solution {
         return false;
     }
 }
+
+//Third Code
+class Solution {
+
+    /**
+     * @param Integer[] $nums
+     * @return Boolean
+     */
+    function containsDuplicate($nums) {
+        $countValues = array_count_values($nums);
+        foreach ($countValues as $quantity) {
+            if ($quantity >= 2) return true;
+        }
+        return false;
+    }
+}
