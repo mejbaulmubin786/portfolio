@@ -2,6 +2,10 @@
 
 class Solution {
 
+    /**
+     * @param Integer[] $nums
+     * @return Integer[]
+     */
     function productExceptSelf($nums) {
         $n = count($nums);
         $result = array_fill(0, $n, 1);
