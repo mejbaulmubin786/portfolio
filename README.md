@@ -5,7 +5,7 @@
 - Contains Duplicate(217)✔️
 - Product of Array Except Self(238)✔️
 - Maximum Subarray(53) ✔️
-- Maximum Product Subarray(152)
+- Maximum Product Subarray(152)✔️
 - Find Minimum in Rotated Sorted Array(153)
 - Search in Rotated Sorted Array(33)
 - 3Sum(15)
