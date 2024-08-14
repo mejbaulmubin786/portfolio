@@ -14,8 +14,8 @@
 - Sum of Two Integers(371)
 - Number of 1 Bits(191)
 - Counting Bits(338)
-- Missing Number
-- Reverse Bits
+- Missing Number(268)
+- Reverse Bits(190)
 ## Dynamic Programming
 - Climbing Stairs
 - Coin Change
