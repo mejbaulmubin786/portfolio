@@ -1,19 +1,19 @@
 # Blind 75 LeetCode Questions
 ## Array
-- Two Sum
-- Best Time to Buy and Sell Stock
-- Contains Duplicate
-- Product of Array Except Self
-- Maximum Subarray
-- Maximum Product Subarray
-- Find Minimum in Rotated Sorted Array
-- Search in Rotated Sorted Array
-- 3 Sum
-- Container With Most Water
+- Two Sum(1)✔️
+- Best Time to Buy and Sell Stock(121)✔️
+- Contains Duplicate(217)✔️
+- Product of Array Except Self(238)✔️
+- Maximum Subarray(53) ✔️
+- Maximum Product Subarray(152)
+- Find Minimum in Rotated Sorted Array(153)
+- Search in Rotated Sorted Array(33)
+- 3Sum(15)
+- Container With Most Water(11)
 ## Binary
-- Sum of Two Integers
-- Number of 1 Bits
-- Counting Bits
+- Sum of Two Integers(371)
+- Number of 1 Bits(191)
+- Counting Bits(338)
 - Missing Number
 - Reverse Bits
 ## Dynamic Programming
