@@ -31,3 +31,30 @@ class Solution {
         return $nums[$left];
     }
 }
+
+
+//Second 
+
+function findMin($nums) {
+    $left = 0;
+    $right = count($nums) - 1;
+
+    while ($left < $right) {
+        $mid = $left + intval(($right - $left) / 2);
+
+        // যদি মধ্যবর্তী উপাদানটি ডানপাশের উপাদানগুলির থেকে বড় হয়
+        if ($nums[$mid] > $nums[$right]) {
+            // তাহলে আমরা জানি, সর্বনিম্ন উপাদানটি ডানপাশে অবস্থিত
+            $left = $mid + 1;
+        } else {
+            // অন্যথায়, সর্বনিম্ন উপাদানটি বামপাশে অবস্থিত
+            $right = $mid;
+        }
+    }
+
+    // অবশেষে, বাম দিকের ইন্ডেক্সটি সর্বনিম্ন উপাদানটি নির্দেশ করবে
+    return $nums[$left];
+}
+
+  
+            
