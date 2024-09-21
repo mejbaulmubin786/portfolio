@@ -27,7 +27,7 @@
 - House Robber II
 - Decode Ways
 - Unique Paths
-- Jump Game
+- Jump Game (55)✔️
 # Graph
 - Clone Graph
 - Course Schedule
