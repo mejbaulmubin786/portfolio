@@ -25,7 +25,7 @@
 - Combination Sum
 - House Robber
 - House Robber II
-- Decode Ways
+- Decode Ways (91)
 - Unique Paths
 - Jump Game (55)✔️
 # Graph
