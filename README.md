@@ -8,7 +8,7 @@
 - Maximum Product Subarray(152)✔️
 - Find Minimum in Rotated Sorted Array(153)✔️
 - Search in Rotated Sorted Array(33)✔️
-- 3Sum(15)
+- 3Sum(15)✔️
 - Container With Most Water(11)
 ## Binary
 - Sum of Two Integers(371)
@@ -17,7 +17,7 @@
 - Missing Number(268)
 - Reverse Bits(190)
 ## Dynamic Programming
-- Climbing Stairs
+- Climbing Stairs✔️
 - Coin Change
 - Longest Increasing Subsequence
 - Longest Common Subsequence
