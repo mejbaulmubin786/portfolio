@@ -1,24 +1,22 @@
 import React from "react";
+import resumeData from "../../data/resumeData";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
+  const { projects } = resumeData;
+
   return (
-    <section id="Projects" className="px-10 md:px-20 py-20 text-white">
-      <h1 className="text-3xl md:text-5xl font-bold text-center mb-12">Projects</h1>
-      
-      <div className="flex flex-wrap justify-center gap-10">
-        <ProjectCard
-          title="Blogging Website"
-          main="A blogging platform built with Next.js and Tailwind CSS."
-        />
-        <ProjectCard
-          title="YouTube Clone"
-          main="A video sharing app inspired by YouTube, built with React."
-        />
-        <ProjectCard
-          title="Netflix Clone"
-          main="A movie streaming platform clone with authentication & API integration."
-        />
+    <section id="Projects" className="py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8">Selected Projects</h2>
+
+        <div className="flex flex-wrap gap-6">
+          {projects.length === 0 ? (
+            <div className="text-gray-400">No projects found. Add projects in <code>src/data/resumeData.js</code>.</div>
+          ) : (
+            projects.map((p, i) => <ProjectCard key={i} project={p} />)
+          )}
+        </div>
       </div>
     </section>
   );

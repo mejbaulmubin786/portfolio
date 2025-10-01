@@ -1,52 +1,78 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import resumeData from "../../data/resumeData";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
+  const [open, setOpen] = useState(false);
   const links = [
-    { id: 1, name: "About", href: "#About" },
-    { id: 2, name: "Experience", href: "#Experience" },
-    { id: 3, name: "Projects", href: "#Projects" },
-    { id: 4, name: "Contact", href: "#Contact" },
+    { id: "About", label: "About" },
+    { id: "Experience", label: "Experience" },
+    { id: "Projects", label: "Projects" },
+    { id: "Contact", label: "Contact" },
   ];
 
   return (
-    <nav className="flex justify-between items-center text-white px-10 md:px-20 py-6 backdrop-blur-lg bg-opacity-30 sticky top-0 z-50">
-      {/* Brand Name */}
-      <span className="text-2xl font-bold tracking-wide">Mubin’s Portfolio</span>
+    <header className="sticky top-0 z-50 backdrop-blur-sm bg-black/25">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <a href="#Home" className="text-xl md:text-2xl font-bold tracking-wide">
+          {resumeData.personal.name}
+          <span className="ml-2 text-sm text-gray-300 block md:inline">
+            — {resumeData.personal.title}
+          </span>
+        </a>
 
-      {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-8 font-semibold">
-        {links.map(({ id, name, href }) => (
-          <li key={id} className="hover:text-[#465697] transition">
-            <a href={href}>{name}</a>
-          </li>
-        ))}
-      </ul>
+        {/* Desktop */}
+        <nav className="hidden md:flex gap-8 items-center">
+          {links.map((l) => (
+            <a
+              key={l.id}
+              href={"#" + l.id}
+              className="text-gray-200 hover:text-white transition"
+            >
+              {l.label}
+            </a>
+          ))}
 
-      {/* Mobile Menu Toggle */}
-      <div className="md:hidden z-50">
-        {menuOpen ? (
-          <FaTimes size={28} onClick={() => setMenuOpen(false)} className="cursor-pointer" />
-        ) : (
-          <FaBars size={28} onClick={() => setMenuOpen(true)} className="cursor-pointer" />
-        )}
+          <a
+            href={resumeData.personal.website}
+            target="_blank"
+            rel="noreferrer"
+            className="px-4 py-2 rounded-full bg-gradient-to-r from-[#465697] to-[#2b3f82] text-sm font-semibold"
+          >
+            Visit Site
+          </a>
+        </nav>
+
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden focus:outline-none"
+          onClick={() => setOpen((p) => !p)}
+          aria-label="Toggle menu"
+        >
+          {open ? <FaTimes size={22} /> : <FaBars size={22} />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <ul className="absolute top-20 left-0 w-full flex flex-col items-center gap-6 py-6 bg-black bg-opacity-90">
-          {links.map(({ id, name, href }) => (
-            <li key={id} className="text-lg">
-              <a href={href} onClick={() => setMenuOpen(false)}>
-                {name}
-              </a>
-            </li>
-          ))}
-        </ul>
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden bg-black/80">
+          <div className="flex flex-col items-center gap-4 py-6">
+            <a href="#About" onClick={() => setOpen(false)}>About</a>
+            <a href="#Experience" onClick={() => setOpen(false)}>Experience</a>
+            <a href="#Projects" onClick={() => setOpen(false)}>Projects</a>
+            <a href="#Contact" onClick={() => setOpen(false)}>Contact</a>
+            <a
+              href={resumeData.personal.linkedin}
+              className="text-sm mt-2"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
       )}
-    </nav>
+    </header>
   );
 };
 

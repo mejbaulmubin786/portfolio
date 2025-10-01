@@ -26,10 +26,11 @@ const About = () => {
         {/* Right: Text */}
         <div className="flex-1 space-y-8">
           <p className="text-gray-300 leading-relaxed text-sm md:text-lg">
-            I am a passionate <span className="text-[#465697] font-semibold">Full-Stack Developer</span> 
-            with expertise in modern frontend & backend technologies. I love building 
-            scalable applications, creating user-friendly designs, and solving 
-            complex problems with efficient code.
+            I am <span className="text-[#465697] font-semibold">Mejbaul Mubin</span>, 
+            a passionate <span className="text-[#465697] font-semibold">Full-Stack Developer</span> 
+            from Bangladesh. I specialize in building modern, responsive, and scalable 
+            web applications. With a strong foundation in both frontend and backend 
+            development, I enjoy transforming ideas into real-world solutions.
           </p>
 
           <ul className="space-y-6">
@@ -38,7 +39,8 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-semibold">Frontend Developer</h3>
                 <p className="text-gray-400 text-sm md:text-md">
-                  Specialized in React, Tailwind CSS, and responsive design.
+                  Skilled in React, JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS 
+                  for building pixel-perfect, responsive user interfaces.
                 </p>
               </div>
             </li>
@@ -48,7 +50,8 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-semibold">Backend Developer</h3>
                 <p className="text-gray-400 text-sm md:text-md">
-                  Experienced in Node.js, Express, REST APIs & authentication.
+                  Experienced with Node.js, Express, REST APIs, and authentication 
+                  systems to create secure and scalable server-side applications.
                 </p>
               </div>
             </li>
@@ -58,7 +61,8 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-semibold">Database Specialist</h3>
                 <p className="text-gray-400 text-sm md:text-md">
-                  Expertise in MongoDB, Redis, SQL with strong query optimization skills.
+                  Expertise in MongoDB, Redis, and MySQL with strong query 
+                  optimization skills to manage large-scale data efficiently.
                 </p>
               </div>
             </li>
