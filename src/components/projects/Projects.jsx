@@ -3,23 +3,24 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <div id="Projects" className="p-10 md:p-24 text-white ">
-      <h1 className="text-2xl md:text-4xl text-white font-bold">Projects</h1>
-      <div className="py-12 px-8 flex flex-wrap gap-5">
+    <section id="Projects" className="px-10 md:px-20 py-20 text-white">
+      <h1 className="text-3xl md:text-5xl font-bold text-center mb-12">Projects</h1>
+      
+      <div className="flex flex-wrap justify-center gap-10">
         <ProjectCard
           title="Blogging Website"
-          main="this is a bloggin website created in next js and used some component library used some component library"
+          main="A blogging platform built with Next.js and Tailwind CSS."
         />
         <ProjectCard
-          title="Youtue Clone"
-          main="this is a bloggin website created in next js and used some component library used some component library"
+          title="YouTube Clone"
+          main="A video sharing app inspired by YouTube, built with React."
         />
         <ProjectCard
           title="Netflix Clone"
-          main="this is a blogging website created this ijsdjf l in next js and used some component library used some component library"
+          main="A movie streaming platform clone with authentication & API integration."
         />
       </div>
-    </div>
+    </section>
   );
 };
 

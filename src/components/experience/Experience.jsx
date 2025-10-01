@@ -1,81 +1,63 @@
 import React from "react";
-import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import { SiRedis } from "react-icons/si";
-import { FaGoogle } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact, FaGoogle, FaAmazon } from "react-icons/fa";
+import { SiRedis, SiMongodb } from "react-icons/si";
 import { RiNetflixFill } from "react-icons/ri";
-import { FaAmazon } from "react-icons/fa";
+
 const Experience = () => {
   return (
-    <div id="Experience" className="p-10 md:p-24">
-      <h1 className="text-2xl md:text-4xl text-white font-bold">Experience</h1>
-      <div className="flex flex-wrap items-center justify-around">
-        <div className="flex flex-wrap md:w-2/5 gap-8 md:p-12 py-10">
-          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
-            <FaHtml5 color="#E34F26" size={50} />
-          </span>
-          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
-            <FaCss3 color="#1572B6" size={50} />
-          </span>
-          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
-            <FaReact color="#61DAFB" size={50} />
-          </span>
-          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
-            <FaJs color="#F7DF1E" size={50} />
-          </span>
-          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
-            <FaFigma color="#F24E1E" size={50} />
-          </span>
-          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
-            <SiMongodb color="#47A248" size={50} />
-          </span>
-          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
-            <SiRedis color="#FF4438" size={50} />
-          </span>
+    <section id="Experience" className="px-10 md:px-20 py-20 text-white">
+      <h1 className="text-3xl md:text-5xl font-bold text-center mb-12">Experience</h1>
+
+      <div className="flex flex-col md:flex-row gap-16">
+        {/* Left: Skills */}
+        <div className="flex flex-wrap gap-6 justify-center md:w-1/2">
+          {[FaHtml5, FaCss3, FaReact, FaJs, FaFigma, SiMongodb, SiRedis].map((Icon, idx) => (
+            <span key={idx} className="p-4 bg-[#0c0e19] rounded-2xl hover:scale-110 transition duration-300">
+              <Icon size={50} />
+            </span>
+          ))}
         </div>
-        <div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center">
-            <FaGoogle color="#4285F4" size={50} />
-            <span className="text-white">
-              <h2 className="leading-tight">Software Engineer , Google</h2>
-              <p className="text-sm leading-tight font-thin">
-                Sept 2023 - Present
-              </p>
-              <ul className="text-sm p-2">
-                <li>- Work as software developer</li>
-                <li>- Senior SDE-developer</li>
+
+        {/* Right: Timeline */}
+        <div className="space-y-6 md:w-1/2">
+          <div className="p-6 bg-[#0c0e19] rounded-xl shadow-md flex gap-6 items-center">
+            <FaGoogle size={50} color="#4285F4" />
+            <div>
+              <h2 className="font-bold text-xl">Software Engineer - Google</h2>
+              <p className="text-sm text-gray-400">Sept 2023 - Present</p>
+              <ul className="list-disc pl-6 text-gray-300 text-sm mt-2">
+                <li>Developed scalable web applications.</li>
+                <li>Led frontend engineering team.</li>
               </ul>
-            </span>
+            </div>
           </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg  p-4 items-center">
-            <RiNetflixFill color="#E50914" size={50} />
-            <span className="text-white">
-              <h2 className="leading-tight">Software Engineer, Google</h2>
-              <p className="text-sm leading-tight font-thin">
-                Sept 2023 - Present
-              </p>
-              <ul className="text-sm p-2">
-                <li>- Work as software developer.</li>
-                <li>- Senior SDE-developer</li>
+
+          <div className="p-6 bg-[#0c0e19] rounded-xl shadow-md flex gap-6 items-center">
+            <RiNetflixFill size={50} color="#E50914" />
+            <div>
+              <h2 className="font-bold text-xl">Software Engineer - Netflix</h2>
+              <p className="text-sm text-gray-400">Jan 2022 - Aug 2023</p>
+              <ul className="list-disc pl-6 text-gray-300 text-sm mt-2">
+                <li>Built high-performance video streaming UI.</li>
+                <li>Optimized backend APIs.</li>
               </ul>
-            </span>
+            </div>
           </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg  p-4 items-center">
-            <FaAmazon color="#FF9900" size={50} />
-            <span className="text-white">
-              <h2 className="leading-tight">Software Engineer, Google</h2>
-              <p className="text-sm leading-tight font-thin">
-                Sept 2023 - Present
-              </p>
-              <ul className="text-sm p-2">
-                <li>- Work as software developer.</li>
-                <li>- Senior SDE-developer</li>
+
+          <div className="p-6 bg-[#0c0e19] rounded-xl shadow-md flex gap-6 items-center">
+            <FaAmazon size={50} color="#FF9900" />
+            <div>
+              <h2 className="font-bold text-xl">Software Engineer - Amazon</h2>
+              <p className="text-sm text-gray-400">Jun 2020 - Dec 2021</p>
+              <ul className="list-disc pl-6 text-gray-300 text-sm mt-2">
+                <li>Worked on large-scale e-commerce system.</li>
+                <li>Implemented secure payment integration.</li>
               </ul>
-            </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
