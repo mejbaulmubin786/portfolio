@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <div
-      id="Footer"
+      id="Contact"
       className="flex justify-around bg-[#465697] text-white p-10 md:p-12 items-center"
     >
       <div>
